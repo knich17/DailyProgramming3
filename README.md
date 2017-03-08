@@ -9,12 +9,12 @@ Uses a game loop to give the user the option of continuing to play.
 
 Used some small math's formulas to calculate the number of words to use and word lengths as shown below.
 
-'''C
+```C
 //1=(5,6), 2=(7,8), 3=(9,10), 4=(11,12), 5=(13,14,15)
 numWords = 5+2*(difficulty-1)+(rand()%2)+(floor(difficulty/5)*(rand()%2));
 //1=(4,5), 2=(6,7), 3=(8,9), 4=(10,11), 5=(12,13,14,15)
 wordLength= 4+2*(difficulty-1)+(rand()%2)+(floor(difficulty/5)*(rand()%4));
-''''
+```
 
 Words were picked from the list by checking if they are the correct length, not already in the list of words to be used, as well as a random chance needing to be met (I used a 1 in 20000 chance).
 
